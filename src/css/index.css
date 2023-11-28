@@ -1,0 +1,28 @@
+@import 'normalize.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  transition:.2s ease-in-out;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  margin: 0;
+  font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+img{
+  max-width: 100%;
+}
