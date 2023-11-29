@@ -20,10 +20,7 @@ const GeneSearch = () => {
     return getGeneOptions(inputValue);
   };
 
-  interface IGeneAsOption{
-    value?:string;
-    label?:string;
-  }
+
   const updateGene = (gene:any) => {
     if(gene.value){
       const newParams = new URLSearchParams({ id: gene.value })
