@@ -18,12 +18,19 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint", "react-hooks", "simple-import-sort"],
+  plugins: [
+    "react",
+    "@typescript-eslint",
+    "react-hooks",
+    "simple-import-sort",
+    "prettier",
+  ],
   rules: {
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "simple-import-sort/imports": "error",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": 1,
   },
 };

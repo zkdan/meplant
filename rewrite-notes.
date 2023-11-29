@@ -1,0 +1,45 @@
+Do a rewrite
+"Rational reonstruction"
+
+//
+loading into browser,let know which slides are too long
+for vh
+every vh reset
+
+to big 
+
+fullscreen on a laptop 
+
+g 12 jump to slide 12
+
+
+lab website reviews? here and why
+
+Talk: how do you build a tool like eplant?
+
+Eplant
+  sidebar
+    home button
+    search/add 
+    collections
+      collection1
+      collection2...
+      addCollection
+      colorMode
+  navbar
+    chosenViewDropdown
+    viewOptions
+    getCitations
+    downloadData
+  mainView
+    table 
+    OR
+    viewer
+      sidebar
+        title
+        thumbnailRail
+          type (keplikova or atgen)
+          sortThumbsButton
+      visualField
+        image
+        scale

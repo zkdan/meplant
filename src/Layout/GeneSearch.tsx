@@ -1,10 +1,10 @@
-import axios from 'axios';
-import { useLocation,useNavigate,useSearchParams } from 'react-router-dom';
-import AsyncSelect from 'react-select/async';
+import axios from "axios";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
+import AsyncSelect from "react-select/async";
 
 const GeneSearch = () => {
   const [_, setSearchParams] = useSearchParams();
-  const isHome = useLocation().pathname === '/';
+  const isHome = useLocation().pathname === "/";
   const navigate = useNavigate();
 
   const getGeneOptions = async (inputValue: string) => {
@@ -20,12 +20,11 @@ const GeneSearch = () => {
     return getGeneOptions(inputValue);
   };
 
-
-  const updateGene = (gene:any) => {
-    if(gene.value){
-      const newParams = new URLSearchParams({ id: gene.value })
-      if(isHome){
-        navigate(`/gene-info?${newParams}`)
+  const updateGene = (gene: any) => {
+    if (gene.value) {
+      const newParams = new URLSearchParams({ id: gene.value });
+      if (isHome) {
+        navigate(`/gene-info?${newParams}`);
       } else {
         setSearchParams(newParams);
       }
@@ -33,12 +32,14 @@ const GeneSearch = () => {
   };
 
   return (
-    <form onSubmit={(e)=>e.preventDefault()} className='text-black'>
-      <label htmlFor='gene-select' className='sr-only' >Search by gene name</label>
+    <form onSubmit={(e) => e.preventDefault()} className="text-black">
+      <label htmlFor="gene-select" className="sr-only">
+        Search by gene name
+      </label>
       <AsyncSelect
-        id='gene-select'
+        id="gene-select"
         // isMulti
-        placeholder={'Search by gene name'}
+        placeholder={"Search by gene name"}
         cacheOptions
         defaultOptions
         loadOptions={promiseOptions}
@@ -49,4 +50,4 @@ const GeneSearch = () => {
 };
 export default GeneSearch;
 
-// Select docs at https://react-select.com/
+// AsyncSelect docs at https://react-select.com/
