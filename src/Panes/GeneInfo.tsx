@@ -1,8 +1,8 @@
-import { useLoaderData, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 
 const GeneInfo = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
 
   return (
     <section className="pane">
