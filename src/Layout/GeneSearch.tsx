@@ -21,15 +21,17 @@ const GeneSearch = () => {
   };
 
   interface IGeneAsOption{
-    value:string;
-    label:string;
+    value?:string;
+    label?:string;
   }
-  const updateGene = (gene:IGeneAsOption) => {
-    const newParams = new URLSearchParams({ id: gene.value })
-    if(isHome){
-      navigate(`/gene-info?${newParams}`)
-    } else {
-      setSearchParams(newParams);
+  const updateGene = (gene:any) => {
+    if(gene.value){
+      const newParams = new URLSearchParams({ id: gene.value })
+      if(isHome){
+        navigate(`/gene-info?${newParams}`)
+      } else {
+        setSearchParams(newParams);
+      }
     }
   };
 
