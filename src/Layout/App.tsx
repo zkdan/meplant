@@ -1,5 +1,5 @@
 
-import { Link, Outlet, Route, Routes } from 'react-router-dom';
+import {Outlet} from 'react-router-dom';
 
 import PaneSelector from './PaneSelector';
 import Sidebar from './Sidebar';

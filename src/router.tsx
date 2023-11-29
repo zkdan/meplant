@@ -26,6 +26,7 @@ export const router = createBrowserRouter(
         loader={async (el) => {
           const url = new URL(el.request.url);
           const term = url.searchParams.get('id');
+          console.log(term);
           return 'hehe'
         }}
         errorElement={<ErrorElement />}

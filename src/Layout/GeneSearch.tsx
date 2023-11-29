@@ -20,8 +20,12 @@ const GeneSearch = () => {
     return getGeneOptions(inputValue);
   };
 
-  const updateGene = (gene:string) => {
-    const newParams = new URLSearchParams({ id: gene })
+  interface IGeneAsOption{
+    value:string;
+    label:string;
+  }
+  const updateGene = (gene:IGeneAsOption) => {
+    const newParams = new URLSearchParams({ id: gene.value })
     if(isHome){
       navigate(`/gene-info?${newParams}`)
     } else {
@@ -39,7 +43,7 @@ const GeneSearch = () => {
         cacheOptions
         defaultOptions
         loadOptions={promiseOptions}
-        onChange={(gene) => updateGene(gene.value)}
+        onChange={(gene) => updateGene(gene)}
       />
     </form>
   );
